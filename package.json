@@ -1,0 +1,22 @@
+{
+  "name": "pinoccio-app-power-graph",
+  "description": "this is a pinoccio app that will show you your troops power usage over time.",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/soldair/pinoccio-app-power-graph.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o bundle.js",
+    "test": "tape test/*.js"
+  },
+  "author": "Ryan Day",
+  "dependencies": {
+    "pinoccio": "~0.1.1",
+    "highcharts-stream": "0.0.0"
+  },
+  "devDependencies": {
+    "browserify": "~3.44.2",
+    "tape": "~2.3.2"
+  }
+}
