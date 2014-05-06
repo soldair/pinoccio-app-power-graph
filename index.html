@@ -2,8 +2,37 @@
 <html>
   <head>
     <title>pinoccio power!</title>
+    <style>
+      .page{
+        display:none;
+      }
+
+      .page.active{
+        display:block;
+      }
+
+    </style>
   </head>
   <body>
-    <h1></h1>
+    <h1>view your troops power use</h1>
+    <div class="page active" id="page-loading">
+        <h3>Loading..</h3>
+        <div>I'm happy to see you!</div>
+    </div>
+    <div class="page" id="page-graph">
+      <div>
+        <span id="account-name">loading..</span> <a href="#" class="pinoccio-login-button"></a>
+      </div>
+      <div id="troop-bar">
+          troop: <select id="troop-select" disabled></select> scout: <select id="scout-select" disabled></select>
+      </div> 
+      <div id="chart">
+        
+      </div>
+    </div>
+    <div class="page" id="page-error">
+      there was an error i didnt know how to handle. please <a href="?">try again</a>
+    </div>
+    <script src="bundle.js"></script>
   </body>
 </html>

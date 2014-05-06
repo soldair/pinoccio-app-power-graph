@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 
-var indexHtml = fgs.readFileSync(__dirname+'/index.html');
+var indexHtml = fs.readFileSync(__dirname+'/index.html');
 var bundleJs = fs.readFileSync(__dirname+'/bundle.js');
 
 
@@ -13,7 +13,9 @@ http.createServer(function(req,res){
     res.end('not found.');
   }
 
-}).listen(process.env.PORT||8787);
+}).listen(process.env.PORT||8787,function(){
+  console.log('listening on ',this.address());
+});
 
 
 
